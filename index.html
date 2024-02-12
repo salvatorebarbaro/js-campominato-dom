@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Campo minato</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Campo minato</h1>
+
+            <div class="commands">
+
+                <select name="difficulty" id="difficulty">
+                    <option value="easy">Facile</option>
+                    <option value="medium">Medio</option>
+                    <option value="hard">Difficile</option>
+                </select>
+    
+                <button id="play-button">Gioca</button>
+
+            </div>
+        </header>
+    </div>
+
+    <div class="container">
+        
+
+        <div id="grid" style="display: none;">
+        </div>
+
+        <div id="user-interface">
+
+            <div id="points"></div>
+            
+            <div id="game-over">
+                Game over
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./code.js"></script>
+</body>
+</html>

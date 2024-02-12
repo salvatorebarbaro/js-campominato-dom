@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* reset */
+
+body {
+    font-family: sans-serif;
+
+    background-color: #000a2a;
+    color: white;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 36px;
+
+    padding: 200px 24px 0;
+
+    margin-bottom: 100px;
+
+}
+
+header button {
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #ac0237;
+    color: white;
+
+    transition: transform .3s ease, box-shadow .3s ease;
+
+    cursor: pointer;
+}
+
+header button:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 6px 4px rgba(0,0,0,0.6);
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    
+    overflow: auto;
+}
+
+#grid {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+
+    width: 1000px;
+    height: 1000px;
+
+    /* bordo esterno */
+    outline: 1px solid #ac0237;
+
+    margin-bottom: 48px;
+}
+
+#grid .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #ac0237;
+
+    color: #adc0ff;
+    font-size: 1.2em;
+
+    user-select: none
+}
+
+#grid.easy .cell {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+#grid.medium .cell {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+#grid.hard .cell {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+
+#grid .cell.clicked {
+    background-color: #adc0ff;
+    color: #000a2a;
+    font-weight: bold;
+}
+
+#grid .cell.bomb {
+    background-color: #ac0237;
+    color: white;
+
+    animation: bombFloat 2s ease infinite ;
+}
+/* fine grid */
+
+
+
+/* user interface */
+
+#user-interface {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+#points {
+    margin-bottom: 1em;
+}
+
+#game-over {
+    display: none;
+
+    
+    background-color: #ac0237;
+    color: white;
+
+    font-size: 1.8em;
+
+    padding: 24px 12px;
+
+    border-radius: 12px;
+}
+
+#game-over small {
+    display: inline-block;
+    margin-top: 1em;
+    opacity: .8;
+
+    font-family: monospace;
+}
+
+
+
+@keyframes bombFloat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
